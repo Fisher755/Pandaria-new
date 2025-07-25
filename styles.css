@@ -1,0 +1,243 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #111; color: #ddd; line-height: 1.6; }
+a { color: #2af; text-decoration: none; }
+
+.navbar { background: #222; display: flex; justify-content: space-between; padding: 10px 20px; align-items: center; }
+.navbar nav a { margin: 0 10px; color: #fff; }
+.navbar .logo { font-size: 1.5em; color: #2af; font-weight: bold; }
+
+.hero { text-align: center; background: url('https://via.placeholder.com/1600x400?text=Minecraft+Server') center/cover no-repeat; color: #fff; padding: 80px 20px; }
+.hero h1 { font-size: 3em; animation: fadeIn 2s; }
+.hero p { font-size: 1.3em; margin-top: 10px; }
+.btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #28a; color: #fff; border-radius: 5px; transition: background 0.3s; }
+.btn:hover { background: #39c; }
+
+.server-status, .game-modes, .events, .gallery { padding: 40px 20px; text-align: center; }
+.modes-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.mode { background: #222; border-radius: 8px; padding: 15px; width: 300px; transition: transform 0.3s; }
+.mode:hover { transform: scale(1.05); }
+.mode img { width: 100%; border-radius: 6px; }
+
+.gallery .images { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; border-radius: 5px; transition: transform 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
+
+footer { background: #222; text-align: center; padding: 20px; font-size: 0.9em; color: #aaa; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Сброс и базовые стили 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #ddd;
+  line-height: 1.6;
+}
+a { color: #2af; text-decoration: none; }
+a:hover { color: #4cf; }*/
+
+/* Навигация */
+.navbar {
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.navbar nav a {
+  margin: 0 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.navbar .logo {
+  font-size: 1.5em;
+  color: #2af;
+  font-weight: bold;
+}
+
+/* Hero-секция */
+.hero {
+  text-align: center;
+  background: url('https://via.placeholder.com/1600x400?text=Minecraft+Server') center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 3em;
+  animation: fadeIn 2s ease-out;
+}
+.hero p {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #28a;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover { background: #39c; }
+
+/* Общие секции */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 8px #000;
+}
+section p, section li { font-size: 1.1em; color: #ccc; }
+
+/* Сервер статус */
+.server-status button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #2af;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.server-status button:hover { background: #4cf; }
+
+/* Режимы */
+.modes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.mode {
+  background: #222;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+.mode:hover { transform: scale(1.05); }
+.mode img { width: 100%; border-radius: 6px; }
+
+/* Галерея */
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.gallery img:hover { transform: scale(1.05); }
+
+/* ===== Стили для About ===== */
+.about ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+  list-style: none;
+}
+.about ul li {
+  background: #222;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* ===== Стили для Shop ===== */
+.shop-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.shop-cards .card {
+  background: #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+.shop-cards .card:hover { transform: translateY(-5px); }
+.shop-cards .card h3 {
+  color: #2af;
+  margin-bottom: 10px;
+}
+.shop-cards .card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #2af;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop-cards .card button:hover { background: #4cf; }
+
+/* ===== Стили для Blog ===== */
+.blog article {
+  background: #222;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+.blog article:hover { transform: scale(1.02); }
+.blog article h3 { color: #2af; }
+.blog article a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4cf;
+  text-decoration: underline;
+}
+
+/* ===== Стили для Community ===== */
+.community p {
+  margin: 10px 0;
+}
+.feedback blockquote {
+  background: #222;
+  border-left: 4px solid #2af;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 600px;
+  font-style: italic;
+  border-radius: 4px;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .modes-grid, .shop-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
