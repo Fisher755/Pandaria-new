@@ -7,19 +7,21 @@
   <meta property="og:title" content="PixelCraft Network - Minecraft сервер">
   <meta property="og:description" content="Лучшие режимы Skyblock, Survival и мини-игры. Заходи и играй!">
   <meta property="og:image" content="img/og-image.jpg">
-  <title>PixelCraft Network</title>
+  <title>Pandaria</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Pandaria</div>
+    <div class="logo"><a href="index.html">Pandaria</a></div>
     <nav>
       <a href="index.html">Главная</a>
       <a href="about.html">О сервере</a>
       <a href="shop.html">Магазин</a>
       <a href="blog.html">Новости</a>
       <a href="community.html">Сообщество</a>
+      <a href="cabinet.html" class="cabinet-link">Личный кабинет</a>
+    <button class="login-btn" onclick="openLogin()">Войти</button>
     </nav>
   </header>
 
@@ -29,11 +31,9 @@
     <a href="#join" class="btn">Играть: mc.pandaria.fun</a>
   </section>
 
-  <section class="server-status">
-  <h2>Статус сервера</h2>
-  <p>Онлайн: <span id="players">—</span> игроков | Ping: <span id="ping">—</span> ms</p>
-  <button onclick="updateStatus()">Обновить</button>
-</section>
+  <div id="server-status" class="server-status">
+  ⏳ Проверка статуса...
+  </div>
 
 <!-- <section class="game-modes">
   <h2>Режимы</h2>

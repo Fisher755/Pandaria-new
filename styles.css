@@ -60,6 +60,189 @@ a:hover { color: #4cf; }*/
   font-weight: bold;
 }
 
+/* 🔹 Общий контейнер ЛК */
+.profile-card {
+  background: var(--panel);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.profile-card h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.profile-card p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.profile-card .highlight {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* 🔹 История покупок */
+.history {
+  background: #222;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.6);
+}
+
+.history h4 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--accent);
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history li {
+  margin: 0.6rem 0;
+  padding: 0.4rem 0.6rem;
+  background: #1a1a1a;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--subtext);
+  transition: background 0.2s;
+}
+
+.history li:hover {
+  background: #2a2a2a;
+  color: var(--text);
+}
+
+/* 🔹 Кнопка входа */
+.login-btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--accent);
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  color: var(--accent);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.login-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 🔹 Кнопка выхода */
+.logout-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 2px solid var(--accent);
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  color: var(--accent);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--accent);
+  color: #fff; /* ✅ белый текст вместо бордового */
+}
+
+
+/* 🔹 Кнопка ЛК в навигации */
+.cabinet-link {
+  font-weight: bold;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cabinet-link:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.history-table th, .history-table td {
+  border: 1px solid #333;
+  padding: 0.6rem;
+  text-align: left;
+}
+.history-table th {
+  background: #1c1c1c;
+  color: var(--accent);
+}
+.history-table tr:nth-child(even) {
+  background: #222;
+}
+
+/* 🔹 Профиль */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.donate-btn {
+  background: var(--accent);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  transition: background .2s;
+}
+
+.donate-btn:hover {
+  background: #c73737;
+}
+
+/* 🔹 Таблица истории */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.history-table th, .history-table td {
+  border: 1px solid #333;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.history-table th {
+  background: #1c1c1c;
+  color: var(--accent);
+}
+
+.history-table tr:nth-child(even) {
+  background: #222;
+}
+
 /* Hero-секция */
 .hero {
   text-align: center;
@@ -100,16 +283,19 @@ section h2 {
 section p, section li { font-size: 1.1em; color: #ccc; }
 
 /* Сервер статус */
-.server-status button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  background: #2af;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
+.server-status {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-.server-status button:hover { background: #4cf; }
+
+.server-status.online {
+  color: #4caf50; /* зелёный */
+}
+
+.server-status.offline {
+  color: #f44336; /* красный */
+}
 
 /* Режимы */
 .modes-grid {

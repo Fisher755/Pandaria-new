@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет | Pandaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 🔹 Шапка -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html">Pandaria</a></div>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html" class="active">О сервере</a>
+    <a href="shop.html">Магазин</a>
+    <a href="blog.html">Новости</a>
+    <a href="community.html">Сообщество</a>
+    <a href="cabinet.html" class="cabinet-link">Личный кабинет</a>
+    <button class="login-btn" onclick="openLogin()">Войти</button>
+  </nav>
+  </header>
+
+  <!-- 🔹 Основное содержимое -->
+  <main class="container">
+    <!-- Профиль игрока -->
+    <section class="profile-card">
+      <div class="profile-header">
+        <div>
+          <h3>👤 Aram-755</h3>
+          <p>Ранг: <span class="highlight">VIP</span></p>
+          <p>Баланс: <span class="highlight">350₽</span>
+            <button class="donate-btn">Пополнить</button>
+          </p>
+          <p>Последний вход: 14.09.2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- История операций -->
+    <section class="history">
+      <h4>История операций</h4>
+      <table class="history-table">
+        <tr><th>Дата</th><th>Операция</th><th>Сумма</th></tr>
+        <tr><td>10.09.2025</td><td>Покупка VIP</td><td>-149₽</td></tr>
+        <tr><td>08.09.2025</td><td>Пополнение баланса</td><td>+200₽</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <!-- 🔹 Подвал -->
+  <footer>
+    <p>&copy; 2025 Pandaria. Все права защищены.</p>
+  </footer>
+</body>
+</html>
+
